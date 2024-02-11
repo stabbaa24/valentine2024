@@ -2,9 +2,50 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Memory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Souvenirs</title>
+    <link rel="stylesheet" href="../css/memory.css">
 </head>
 <body>
+<h1>Nos souvenirs</h1>
+<div class="carousel">
+    <div class="carousel-slides">
+        <!-- Souvenir 1 -->
+        <div class="carousel-slide">
+            <img src="../assets/ghost.jpg" alt="Souvenir 1">
+            <div class="date">14 Février 2021</div>
+            <div class="location">Nice</div>
+        </div>
+        <!-- Souvenir 2 -->
+        <div class="carousel-slide">
+            <img src="../assets/shopping.jpg" alt="Souvenir 2">
+            <div class="date">31 Mai 2023</div>
+            <div class="location">Nice</div>
+        </div>
+        <!-- Souvenir 3 -->
+        <div class="carousel-slide">
+            <img src="../assets/mucem.png" alt="Souvenir 3">
+            <div class="date">30 Aout 2023</div>
+            <div class="location">Marseille</div>
+        </div>
+        <!-- Souvenir 4 -->
+        <div class="carousel-slide">
+            <img src="../assets/noel_2.png" alt="Souvenir 4">
+            <div class="date">22 Décembre 2023</div>
+            <div class="location">Nice</div>
+        </div>
+        <!-- Souvenir 5 -->
+        <div class="carousel-slide">
+            <img src="../assets/theatre.png" alt="Souvenir 5">
+            <div class="date">03 Février 2024</div>
+            <div class="location">Nice</div>
+        </div>
+    </div>
+    <a class="carousel-control prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="carousel-control next" onclick="moveSlide(1)">&#10095;</a>
+</div>
 
+
+<script src="../js/memory.js"></script>
 </body>
 </html>

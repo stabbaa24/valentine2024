@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: black;
+    color: #ffffff;
+    font-family: 'Great Vibes';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ff4757;
+
+    margin: 0;
+    padding: 50px;
+}
+
+.carousel {
+    position: relative;
+    max-width: 600px;
+    height: auto;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 10px; /* Bordures arrondies pour le style */
+}
+
+img {
+    width: 500px;
+    height: 400px;
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%; /* Chaque diapositive prend toute la largeur du carrousel */
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centre l'image horizontalement */
+    align-items: center; /* Centre l'image verticalement */
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 500px; /* Hauteur maximale pour les images */
+    object-fit: cover; /* Les images couvrent tout l'espace disponible */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2em;
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.6); /* Fond légèrement transparent pour les contrôles */
+    border-radius: 50%;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.date, .location {
+    position: absolute;
+    color: #fff;
+    padding: 10px 20px; /* Plus de padding pour un meilleur visuel */
+    background-color: #ff4757; /* Couleur thématique pour la Saint-Valentin */
+    border-radius: 5px;
+    margin: 10px;
+    font-weight: bold; /* Texte en gras pour plus de visibilité */
+}
+
+.date {
+    top: 10px; /* Position en haut à gauche */
+    left: 10px;
+    font-size: 1rem; /* Taille de police standard pour les dates */
+}
+
+.location {
+    bottom: 10px; /* Position en bas à droite */
+    right: 10px;
+    font-size: 0.9rem; /* Un peu plus petit pour le lieu */
+}
+
+/* Styles pour les contrôles de navigation */
+.carousel-control:hover {
+    background-color: #ff4757;
+    box-shadow: 0 0 20px #ff4757; /* Effet néon au survol */
+    cursor: pointer;
+}
+
+/* Style pour les indicateurs du carrousel (si utilisés) */
+.carousel-indicators li {
+    background-color: #ff4757; /* Couleur d'indicateur active */
+}
+
+.carousel-indicators .active {
+    background-color: #fff; /* Couleur d'indicateur pour la diapositive actuelle */
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        max-width: 100%;
+        margin: 20px;
+    }
+}
