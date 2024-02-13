@@ -4,7 +4,7 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: black;
+    background: #1a1a1a;
     color: #ffffff;
     font-family: 'Great Vibes';
     display: flex;
@@ -19,6 +19,24 @@ h1 {
 
     margin: 0;
     padding: 50px;
+}
+
+.heart-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.heart-button:hover {
+    transform: scale(1.1);
 }
 
 .carousel {

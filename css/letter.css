@@ -1,5 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 body {
-    background: #f3e9e9; /* Couleur de fond plus douce */
+    background: #1a1a1a;
+    color: #444;
+    font-family: 'Great Vibes', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.heart-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.heart-button:hover {
+    transform: scale(1.1);
 }
 
 .letter-image {
@@ -86,11 +115,12 @@ body {
     transition: 0.4s 0.2s;
 }
 
-.animated-mail .letter .letter-border {
+/*.animated-mail .letter .letter-border {
     height: 10px;
     width: 100%;
     background: repeating-linear-gradient(-45deg, #cb5a5e, #cb5a5e 8px, transparent 8px, transparent 18px);
-}
+}*/
+
 
 .animated-mail .letter .letter-title {
     margin-top: 10px;
@@ -141,7 +171,7 @@ body {
     -moz-transition: 0.4s;
     -moz-transform: translateX(-50%);
     border-radius: 100%;
-    background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    background: radial-gradient(rgba(222, 44, 44, 0.5), rgba(226, 9, 9, 0), rgba(247, 89, 89, 0));
 }
 
 .letter-image:hover .animated-mail {
@@ -165,46 +195,40 @@ body {
     width: 250px;
 }
 
-/* Ajouter une ombre douce autour de la lettre pour un effet plus romantique */
 .animated-mail .letter {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 5px; /* Bords arrondis pour la lettre */
-    transition: all 0.6s ease-out; /* Transition plus douce */
-}
-
-/* Modifier la couleur et l'opacité du timbre pour un look plus doux */
-.animated-mail .letter .letter-stamp {
-    background: #fa8072;
-    opacity: 0.7;
+    box-shadow: 0 4px 8px rgba(226, 9, 9, 0.1);
+    border-radius: 5px;
+    transition: all 0.6s ease-out;
+    font-family: 'Great Vibes', cursive;
+    color: #444;
+    box-shadow: none;
+    background: white;
+    border: 1px solid #e95f55;
 }
 
 /* Survol de l'enveloppe */
 .letter-image:hover .animated-mail .letter {
     z-index: 3;
-    width: 300px; /* Nouvelle largeur */
-    height: 200px;
-    padding: 20px; /* Ajouter un peu d'espace autour du texte */
-    overflow: hidden; /* Cache le contenu débordant */
-    transition: transform 0.5s ease, height 0.5s ease; /* Transition douce */
+    width: 600px;
+    height: 300px;
+    padding: 10px;
+    overflow: hidden;
+    transition: transform 0.5s ease, height 0.5s ease;
 }
 
-/* Ajustement pour que la lettre soit bien rectangulaire et centrée */
 .animated-mail .letter {
-    width: 180px; /* Largeur ajustée pour une apparence plus rectangulaire */
-    left: 10px; /* Centrage de la lettre par rapport à l'enveloppe */
-    bottom: 20px; /* Espacement du bas pour un effet d'ouverture réaliste */
-    transition: bottom 0.5s ease, width 0.5s ease; /* Transition douce pour l'effet d'ouverture */
+    width: 180px;
+    left: 10px;
+    bottom: 20px;
+    transition: bottom 0.5s ease, width 0.5s ease;
 }
 
-/* Réajuster l'ombre pour suivre la lettre */
 .letter-image:hover .shadow {
-    width: 220px; /* Ajuster la largeur de l'ombre pour correspondre à l'agrandissement de la lettre */
-    opacity: 0.2; /* Réduire l'opacité de l'ombre pour un effet plus subtil */
-    transition: width 0.5s ease, opacity 0.5s ease; /* Transition douce */
+    width: 220px;
+    opacity: 0.2;
+    transition: width 0.5s ease, opacity 0.5s ease;
 }
 
-
-/* Ajout de décorations romantiques */
 .letter-image:before, .letter-image:after {
     content: "";
     position: absolute;
@@ -215,6 +239,8 @@ body {
     transform: translateX(-50%);
     background-size: cover;
     z-index: -1;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .letter-image:before {
@@ -225,5 +251,28 @@ body {
 .letter-image:after {
     transform: translate(40%, -50%) rotate(180deg);
     opacity: 0.7;
+}
+
+.letter-context-body p {
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #333;
+    line-height: 1.5;
+    padding: 10px;
+}
+
+.letter-image:hover .animated-mail .letter .letter-context-body {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    overflow: auto;
+    transition: width 0.5s ease, height 0.5s ease, padding 0.5s ease; /* Transition douce */
+}
+
+.animated-mail .letter .letter-context-body p {
+    font-family: 'Great Vibes', cursive;
+    color: #444;
+    font-size: 1.2em;
+    line-height: 1.4;
 }
 
